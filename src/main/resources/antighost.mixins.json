@@ -1,0 +1,11 @@
+{
+    "required": true,
+    "package": "de.guntram.mcmod.antighost.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "CTResourcePackMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
