@@ -1,7 +1,6 @@
 package de.guntram.mcmod.antighost;
 
 import com.mojang.brigadier.arguments.IntegerArgumentType;
-import de.guntram.mcmod.crowdintranslate.CrowdinTranslate;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -38,7 +37,6 @@ public class AntiGhost implements ClientModInitializer {
         loadConfig();
         final String category = "key.categories.antighost";
         requestBlocksKey = new KeyBinding("key.antighost.reveal", GLFW_KEY_G, category);
-        CrowdinTranslate.downloadTranslations(MOD_ID);
         KeyBindingHelper.registerKeyBinding(requestBlocksKey);
         ClientTickEvents.END_CLIENT_TICK.register(e -> keyPressed());
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {

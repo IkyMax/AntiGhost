@@ -3,9 +3,6 @@
     "id": "antighost",
     "version": "${version}",
     "environment": "client",
-    "entrypoints": {
-        "client": [ "de.guntram.mcmod.antighost.AntiGhost" ]
-    },
     "custom": {
         "modupdater": {
             "strategy": "json",
